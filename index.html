@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vnaya Tutoring OS</title>
+    <style>
+        body { background: #0f172a; color: white; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 50px; border-radius: 20px; text-align: center; }
+        h1 { color: #38bdf8; }
+    </style>
+</head>
+<body>
+    <div class="glass">
+        <h1>Vnaya Intelligence OS</h1>
+        <p>AI Support is active. Click the chat bubble to start.</p>
+    </div>
+
+    <script>
+      (function(d,t) {
+        var BASE_URL="http://localhost:3000";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'Awm2HU1acGbCmoMspxxJZLvY',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+</body>
+</html>
